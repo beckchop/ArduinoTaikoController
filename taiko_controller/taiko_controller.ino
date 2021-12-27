@@ -1,14 +1,14 @@
 #include "AnalogReadNow.h"
 
-//#define DEBUG_OUTPUT
-//#define DEBUG_OUTPUT_LIVE
-//#define DEBUG_TIME
-//#define DEBUG_DATA
+// #define DEBUG_OUTPUT
+// #define DEBUG_OUTPUT_LIVE
+// #define DEBUG_TIME
+// #define DEBUG_DATA
 
-//#define ENABLE_KEYBOARD
-#define ENABLE_NS_JOYSTICK
+#define ENABLE_KEYBOARD
 
-//#define HAS_BUTTONS
+// #define ENABLE_NS_JOYSTICK
+// #define HAS_BUTTONS
 
 #ifdef ENABLE_KEYBOARD
 #include <Keyboard.h>
@@ -33,28 +33,28 @@ const int button_key[16] = {
 #endif
 #ifdef ENABLE_NS_JOYSTICK
 const int button[16] = {
-  0 /*SWITCH_HAT_U*/, 0 /*SWITCH_HAT_R*/, 0 /*SWITCH_HAT_D*/, 0 /*SWITCH_HAT_L*/,
-  SWITCH_BTN_X, SWITCH_BTN_A, SWITCH_BTN_B, SWITCH_BTN_Y,
+  0 /*SWITCH_HAT_R*/, 0 /*SWITCH_HAT_L*/, 0 /*SWITCH_HAT_D*/, 0 /*SWITCH_HAT_U*/,
+  SWITCH_BTN_X, SWITCH_BTN_Y, SWITCH_BTN_A, SWITCH_BTN_B,
   SWITCH_BTN_L, SWITCH_BTN_R, SWITCH_BTN_SELECT, SWITCH_BTN_START,
   SWITCH_BTN_CAPTURE, SWITCH_BTN_HOME, 0 /*Fn1*/, 0 /*Fn2*/
 };
 const int hat_mapping[16] = {
-  SWITCH_HAT_CENTER, SWITCH_HAT_U, SWITCH_HAT_R, SWITCH_HAT_UR,
-  SWITCH_HAT_D, SWITCH_HAT_CENTER, SWITCH_HAT_DR, SWITCH_HAT_R,
-  SWITCH_HAT_L, SWITCH_HAT_UL, SWITCH_HAT_CENTER, SWITCH_HAT_U,
-  SWITCH_HAT_DL, SWITCH_HAT_L, SWITCH_HAT_D, SWITCH_HAT_CENTER,
+  SWITCH_HAT_CENTER, SWITCH_HAT_R, SWITCH_HAT_L, SWITCH_HAT_UR,
+  SWITCH_HAT_D, SWITCH_HAT_CENTER, SWITCH_HAT_DR, SWITCH_HAT_L,
+  SWITCH_HAT_U, SWITCH_HAT_UL, SWITCH_HAT_CENTER, SWITCH_HAT_R,
+  SWITCH_HAT_DL, SWITCH_HAT_U, SWITCH_HAT_D, SWITCH_HAT_CENTER,
 };
 #endif
 #endif
 
-const int min_threshold = 15;
+const int min_threshold = 45;
 const long cd_length = 10000;
 const float k_threshold = 1.5;
 const float k_decay = 0.97;
 
 const int pin[4] = {A0, A3, A1, A2};
-const int key[4] = {'d', 'f', 'j', 'k'};
-const float sens[4] = {1.0, 1.0, 1.0, 1.0};
+const int key[4] = {'z', 'x', 'n', 'm'};
+const float sens[4] = {0.9, 1.0, 1.0, 0.9};
 
 const int key_next[4] = {3, 2, 0, 1};
 
