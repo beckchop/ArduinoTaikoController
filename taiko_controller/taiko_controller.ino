@@ -15,7 +15,6 @@
 #endif
 
 #ifdef ENABLE_NS_JOYSTICK
-#include "Joystick.h"
 const int led_pin[4] = {8, 9, 10, 11};
 const int sensor_button[4] = {SWITCH_BTN_ZL, SWITCH_BTN_LCLICK, SWITCH_BTN_RCLICK, SWITCH_BTN_ZR};
 #endif
@@ -53,7 +52,7 @@ const float k_threshold = 1.5;
 const float k_decay = 0.97;
 
 const int pin[4] = {A0, A3, A1, A2};
-const int key[4] = {'z', 'x', 'n', 'm'};
+const int key[4] = {'q','w','o','p'};
 const float sens[4] = {0.9, 1.0, 1.0, 0.9};
 
 const int key_next[4] = {3, 2, 0, 1};
